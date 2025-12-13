@@ -4,7 +4,7 @@ import axiosClient from './axiosClient';
 export async function redirectGuestTo() {
     try {
         await axiosClient.get('/api/user');
-        return redirect('/');
+        return redirect('/home');
     } catch {
         return { user: null };
     }

@@ -1,6 +1,11 @@
 // axiosClient.ts
 import axios from 'axios';
 
+export const axiosCsrfClient = axios.create({
+    baseURL: 'http://localhost:8000',
+    withCredentials: true,
+});
+
 const axiosClient = axios.create({
     baseURL: 'http://localhost:8000',
     withCredentials: true,
@@ -25,6 +30,18 @@ export class XError extends Error {
         this.data = e.data;
     }
 }
+
+axiosClient.interceptors.request.use(
+    async (config) => {
+        // if (config.method === 'post') {
+        //     await csrfClient.get('/sanctum/csrf-cookie');
+        // }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+);
 
 axiosClient.interceptors.response.use(
     (response) => response,

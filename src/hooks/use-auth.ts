@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axiosClient, { XError } from '@/lib/axiosClient';
+import axiosClient, { axiosCsrfClient, XError } from '@/lib/axiosClient';
 import { useNavigate } from 'react-router';
 import { sleep } from '@/lib/utils';
 import { toast } from 'sonner';
@@ -11,7 +11,7 @@ export const useAuth = () => {
     const login = async (email: string, password: string) => {
         try {
             setLoading(true);
-            await axiosClient.get('/sanctum/csrf-cookie');
+            await axiosCsrfClient.get('/sanctum/csrf-cookie');
             await axiosClient.post('/api/login', { email, password });
             await sleep(500);
             navigate('/home');

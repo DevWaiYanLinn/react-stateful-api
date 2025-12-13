@@ -1,4 +1,4 @@
-import { createBrowserRouter, useLoaderData } from 'react-router';
+import { createBrowserRouter } from 'react-router';
 import LoginPage from './pages/login';
 import HomePage from './pages/home';
 import { loadInitialData, redirectGuestTo } from './lib/loader';
@@ -11,6 +11,7 @@ export const router = createBrowserRouter([
         loader: loadInitialData,
         children: [
             {
+                index: true,
                 path: '/home',
                 Component: HomePage,
             },

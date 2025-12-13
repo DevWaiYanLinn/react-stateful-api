@@ -17,6 +17,10 @@ export default function Root() {
                             '/api/user': user,
                         },
                         fetcher: (url, init) => axiosClient.get(url, init).then((res) => res.data.data),
+                        revalidateOnFocus: false,
+                        refreshWhenHidden: false,
+                        revalidateOnReconnect: true,
+                        revalidateIfStale: true,
                     }}
                 >
                     <Navbar />

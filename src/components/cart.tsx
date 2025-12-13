@@ -36,6 +36,7 @@ export function Cart(props: CardProps) {
                     ...cart,
                     cart_detail: [...cart.cart_detail, { id: new Date().getTime(), produce_id: productId }],
                 },
+                revalidate: false,
             });
         }
     };
