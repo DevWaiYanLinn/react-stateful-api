@@ -3,6 +3,7 @@ import LoginPage from './pages/login';
 import HomePage from './pages/home';
 import { loadInitialData, redirectGuestTo } from './lib/loader';
 import Root from './Root';
+import Calendar from './pages/calendar';
 
 export const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ export const router = createBrowserRouter([
                 index: true,
                 path: '/home',
                 Component: HomePage,
+            },
+            {
+                path: '/calendar',
+                Component: Calendar,
             },
         ],
     },

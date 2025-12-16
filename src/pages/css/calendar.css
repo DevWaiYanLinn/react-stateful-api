@@ -1,0 +1,62 @@
+.fc-day-sun,
+.fc-day-sat {
+    color: #be123c !important;
+}
+
+.fc .fc-col-header-cell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fc-day-today {
+    background-color: unset !important;
+}
+
+.fc-highlight {
+    background-color: #86efac !important;
+}
+.fc-daygrid-day-number {
+    font-size: 0.8rem;
+}
+
+.stock-zero {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+.stock-low {
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+.stock-available {
+    background-color: #22c55e;
+    color: #fff;
+}
+
+.stock-plenty {
+    background-color: #16a34a;
+    color: #fff;
+}
+
+.date-selected {
+    background-color: #86efac;
+    border: 2px solid #22c55e;
+}
+
+.date-disabled {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+}
+
+.fc-daygrid-day-top {
+    visibility: visible !important;
+}
+
+.fc-daygrid-day-events {
+    margin-bottom: 5px !important;
+}
+
+.fc .fc-daygrid-day-top {
+    flex-direction: row !important;
+}
